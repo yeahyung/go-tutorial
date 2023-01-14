@@ -29,6 +29,9 @@ func main() {
 	fmt.Println(canDrink(20))
 
 	copyValue()
+	sliceTest()
+	mapTest()
+	structTest()
 }
 
 //func multiply(a int, b int) int {
@@ -102,4 +105,33 @@ func copyValue() {
 	a = 10
 	fmt.Println(a, b, *c)
 	fmt.Println(&a, &b, c)
+}
+
+func sliceTest() {
+	names := []string{"yea", "yea1", "yee2"}
+	// append 는 names 를 수정하지 않고 새로운 slice 를 return
+	names = append(names, "yea3")
+	fmt.Printf("%v\n", names)
+}
+
+func mapTest() {
+	//          key    value
+	yea := map[string]string{"name": "yea", "age": "12"}
+
+	for key, value := range yea {
+		fmt.Println(key, value)
+	}
+}
+
+type person struct {
+	name    string
+	age     int
+	favFood []string
+}
+
+func structTest() {
+	favFood := []string{"kimchi", "kimchi2"}
+	// yea := person{"yea", 12, favFood}
+	yea := person{name: "yea", age: 12, favFood: favFood}
+	fmt.Println(yea)
 }
