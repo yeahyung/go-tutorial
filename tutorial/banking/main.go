@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"go-tutorial/banking/banking"
+	"go-tutorial/tutorial/banking/banking"
 	"log"
 )
 

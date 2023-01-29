@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"go-tutorial/dict/dict"
+	"go-tutorial/tutorial/dict/dict"
 )
 
 func main() {
